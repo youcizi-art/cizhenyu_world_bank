@@ -4,7 +4,7 @@
   "name": "World Bank Data",
   "category": "analytics",
   "tier": "optional",
-  "description": "世界银行开放数据（Indicators API v2）：全球国家与地区 GDP、人口、通胀、贸易、能源、教育等宏观时间序列指标（免密钥，开箱即用）",
+  "description": "World Bank open data (Indicators API v2): GDP, population, inflation, trade, energy, education and other macro time series by country/region (no API key, ready to use)",
   "source": {
     "github": "https://github.com/youcizi-art/cizhenyu_world_bank",
     "defaultRef": "master"
@@ -12,20 +12,38 @@
   "install": {
     "runtime": "python",
     "steps": [],
-    "readyCheck": ["server.py"]
+    "readyCheck": [
+      "server.py"
+    ]
   },
   "mcp": {
     "transport": "stdio",
     "command": "python",
-    "args": ["server.py"],
+    "args": [
+      "server.py"
+    ],
     "cwd": "."
   },
   "guides": {
-    "setup": "guides/setup.md"
+    "setup": "guides/setup.md",
+    "setupByLocale": {
+      "zh-CN": "guides/setup.md",
+      "zh": "guides/setup.md",
+      "en": "guides/setup.en.md",
+      "en-US": "guides/setup.en.md"
+    }
   },
   "health": {
     "requireCredentials": false,
-    "requireReadyFiles": ["server.py"]
+    "requireReadyFiles": [
+      "server.py"
+    ]
   },
-  "actions": []
+  "actions": [],
+  "defaultLocale": "en",
+  "i18n": {
+    "zh-CN": {
+      "description": "世界银行开放数据（Indicators API v2）：全球国家与地区 GDP、人口、通胀、贸易、能源、教育等宏观时间序列指标（免密钥，开箱即用）"
+    }
+  }
 }
